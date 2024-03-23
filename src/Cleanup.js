@@ -1,14 +1,18 @@
 import { useState, useEffect } from "react";
 
 function Hello() {
-  function byFn(){
-    console.log("bye:(");
-  }
-  function hiFn(){
-    console.log("created :)");
-    return byFn;
-  }
-  useEffect(hiFn,[]);
+  useEffect(() => {
+    console.log("hi :)");
+    return () => console.log("bye :(");
+  }, []);
+
+  //  useEffect(function(){
+  //   console.log("hi :)");
+  //   return function () {
+  //     console.log("bye :(");
+  //   };
+  //  },[]);
+
   return <h1>Hello</h1>;
 }
 //component는 jsx를 부르는 function이다
