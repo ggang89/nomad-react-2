@@ -3,6 +3,7 @@ import Button from "./Button";
 import styles from "./App.module.css";
 import Counter from "./Counter";
 import Cleanup from "./Cleanup";
+import Todo from "./Todo";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
      <Button text={"Continue"}/>
      <Counter/>
      <Cleanup/>
+     <Todo/>
     </div>
   );
 }
