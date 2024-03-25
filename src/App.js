@@ -4,6 +4,7 @@ import styles from "./App.module.css";
 import Counter from "./Counter";
 import Cleanup from "./Cleanup";
 import Todo from "./Todo";
+import CoinTracker from "./CoinTracker";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
      <Counter/>
      <Cleanup/>
      <Todo/>
+     <CoinTracker/>
     </div>
   );
 }

@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 function Todo() {
-  const [toDo, setTodo] = useState("");
-  const [toDos, setToDos] = useState([]);
+  const [toDo, setTodo] = useState(""); //할일
+  const [toDos, setToDos] = useState([]); //할일 목록들
   const onChange = (event) => setTodo(event.target.value);
   const onSubmit = (event) => {
     event.preventDefault();
