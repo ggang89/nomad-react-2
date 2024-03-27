@@ -30,3 +30,6 @@ function CoinTracker() {
 }
 
 export default CoinTracker;
+
+//fetch()전역함수
+//fetch()메서드는 네트워크에서 리소스(url)을 가져올 때 사용한다.
