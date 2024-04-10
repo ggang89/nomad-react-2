@@ -8,7 +8,7 @@ function Movie({ id, coverImg, title,year, summary, genres }) {
     <div className={styles.movie}>
       <img src={coverImg} alt={title} className={styles.movie_img}/>
       <h2 className={styles.movie_title}>
-        <Link to={`${process.env.PUBLIC_URL}/movie/${id}`}>{title}</Link>
+        <Link to={`/movie/${id}`}>{title}</Link>
       </h2>
       <h3 className={styles.movie_year}>{year}</h3>
       <p>{summary.length > 235 ? `${summary.slice(0,235)}...`:summary}</p>
