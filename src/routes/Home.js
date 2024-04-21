@@ -13,6 +13,7 @@ function Home() {
     ).json();
     setMovies(json.data.movies);
     setLoading(false);
+    console.log(json);
   };
   useEffect(() => {
     getMovies();
@@ -21,24 +22,24 @@ function Home() {
     <div className={styles.container}>
       {loading ? (
         <div className={styles.loader}>
-        <span>Loading...</span>
+          <span>Loading...</span>
         </div>
       ) : (
         <>
-        <h2 className={styles.title}>Movie </h2>
-        <div className={styles.movies}>
-          {movies.map((movie) => (
-            <Movie
-              key={movie.id}
-              id={movie.id}
-              year={movie.year}
-              coverImg={movie.medium_cover_image}
-              title={movie.title}
-              summary={movie.summary}
-              genres={movie.genres}
-            />
-          ))}
-        </div>
+          <h2 className={styles.title}>Movie </h2>
+          <div className={styles.movies}>
+            {movies.map((movie) => (
+              <Movie
+                key={movie.id}
+                id={movie.id}
+                year={movie.year}
+                coverImg={movie.medium_cover_image}
+                title={movie.title}
+                summary={movie.summary}
+                genres={movie.genres}
+              />
+            ))}
+          </div>
         </>
       )}
     </div>

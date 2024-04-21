@@ -5,12 +5,14 @@ import styles from "./Home.module.css";
 function Detail() {
   const { id } = useParams();
   const [loading, setLoading] = useState(true);
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState({});
   // 왜 변수랑 밑에 movie를 맞춰줘야 하는지(저건 json 정보를 따라야 하는거 아닌지)
   const getMovie = async () => {
     const json = await (
       await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
     ).json();
+    // {status: 200, stasd: sdsd, data: {movie: {id:0}}}
+    //movies = {id:0}
     console.log(json);
     setMovies(json.data.movie);
     setLoading(false);
